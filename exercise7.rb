@@ -10,4 +10,18 @@ def numOfStudents(array)
   end
 end
 
+# Lists number of cohort and students
 numOfStudents(students)
+
+# Adds cohort
+students[:cohort4]=43
+
+# Expanded by 5%
+def expand(array)
+  array.each do |x,y|
+    expansion = y * 5/100 + y
+    puts "#{x}: #{expansion} students"
+  end
+end
+
+expand(students)
