@@ -23,5 +23,8 @@ def expand(array)
     puts "#{x}: #{expansion} students"
   end
 end
-
 expand(students)
+
+# Delete 2nd cohort
+students.delete(:cohort2)
+numOfStudents(students)
