@@ -1,26 +1,36 @@
 grocery_list = ["detergent","apples","bread","milk","eggs"]
 
-def listGroceries(grocery_list)
-  grocery_list.each do |item|
+# Puts groceries in a list
+def listGroceries(array)
+  array.each do |item|
     puts "* #{item}"
   end
-  puts "You have #{grocery_list.count} number of items."
 end
 
 grocery_list << "rice"
 
-def checkItem(grocery_list)
+# Checks whether item is on your list
+def checkItem(array)
 puts "What item would you want to check for?"
 item=gets.chomp
-if grocery_list.include?(item)
+if array.include?(item)
     puts "You need to pick up #{item}."
   else
     puts "You don't need to pick up #{item} today."
   end
 end
 
-listGroceries(grocery_list)
+# # Lists groceries
+# listGroceries(grocery_list)
+#
+# # Counts number of items on your list
+# puts "You have #{grocery_list.count} number of items."
+#
+# # Checks for your item
+# puts checkItem(grocery_list)
+#
+# # Puts second item on your list
+# puts "The second item on your list is #{grocery_list[1]}."
 
-checkItem(grocery_list)
-
-grocery_list[1]
+sorted_array = grocery_list.sort
+listGroceries(sorted_array)
