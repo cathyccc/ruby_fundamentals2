@@ -28,3 +28,13 @@ expand(students)
 # Delete 2nd cohort
 students.delete(:cohort2)
 numOfStudents(students)
+
+# Calculate total number of students
+def calcTotal(array)
+  total = 0
+  array.each do |x,y|
+    total += y
+  end
+  puts "The total number of students is #{total}."
+end
+calcTotal(students)
